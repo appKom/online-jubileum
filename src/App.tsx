@@ -1,7 +1,5 @@
 import './index.css';
 import Countdown from './components/Countdown';
-import ScrollIndicator from './components/ScrollIndicator';
-import FormNotification from './components/FormNotification';
 import { useRef } from 'react';
 
 function App() {
@@ -17,14 +15,6 @@ function App() {
         <div className='flex justify-end flex-[20]'>
           <Countdown containerRef={scrollContainerRef}/>
         </div>
-        <div className='flex flex-col justify-end flex-[1]'>
-          <ScrollIndicator containerRef={scrollContainerRef}/>
-        </div>
-      </div>
-
-      {/* Form link section */}
-      <div className="w-full min-h-screen flex justify-center items-center bg-black snap-start">
-        <FormNotification />
       </div>
     </div>
   );
