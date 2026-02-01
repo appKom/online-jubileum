@@ -14,7 +14,7 @@ export default function SplashPage() {
     const terminalRef = useRef<HTMLDivElement>(null);
     const [showProgram, setShowProgram] = useState(false);
     const [now, setNow] = useState(new Date());
-    const targetDate = new Date(2026, 1, 16)
+    const targetDate = new Date(2026, 1, 16, 12);
 
     // Update countdown
     useEffect(() => {
