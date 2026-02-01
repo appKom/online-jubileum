@@ -4,7 +4,8 @@ export function useTypewriter(
   text: string,
   speed = 40,
   start = true,
-  command = false
+  command = false,
+  jump = 1,
 ) {
   const [displayedText, setDisplayedText] = useState("");
   const [isDone, setIsDone] = useState(false);
@@ -17,8 +18,8 @@ export function useTypewriter(
     setIsDone(false);
 
     const interval = setInterval(() => {
-      setDisplayedText((prev) => prev + text.charAt(index));
-      index++;
+      setDisplayedText((prev) => prev + text.substring(index, index + jump));
+      index+= jump;
 
       if (index >= text.length) {
         clearInterval(interval)
@@ -47,7 +48,7 @@ export function useTypewriter(
           }
 
 
-        }, 500)
+        }, 100)
       }
     }, speed);
 

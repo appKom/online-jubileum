@@ -1,4 +1,4 @@
-import SplashPage from './components/Splashpage';
+import SplashPage from './components/SplashPage';
 import './index.css';
 import { useRef } from 'react';
 
