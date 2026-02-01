@@ -133,37 +133,37 @@ export default function SplashPage() {
                         <div className="flex-[8]">
                             {firstRow.displayedText} 
                         </div>
-                        {bottomBorder.isDone && <a href={programRows[0].link} className="flex-[1] font-glass">| ↗</a>}
+                        {bottomBorder.isDone && <a href={programRows[0].link} target="_blank" className="flex-[1] font-glass">| ↗</a>}
                     </div>
                     <div className="flex">
                         <div className="flex-[8]">
                             {secondRow.displayedText} 
                         </div>
-                        {bottomBorder.isDone && <a href={programRows[1].link} className="flex-[1] font-glass">| ↗</a>}
+                        {bottomBorder.isDone && <a href={programRows[1].link} target="_blank" className="flex-[1] font-glass">| ↗</a>}
                     </div>
                     <div className="flex">
                         <div className="flex-[8]">
                             {thirdRow.displayedText} 
                         </div>
-                        {bottomBorder.isDone && <a href={programRows[2].link} className="flex-[1] font-glass">| ↗</a>}
+                        {bottomBorder.isDone && <a href={programRows[2].link} target="_blank" className="flex-[1] font-glass">| ↗</a>}
                         </div>
                     <div className="flex">
                         <div className="flex-[8]">
                             {fourthRow.displayedText}
                         </div>
-                        {bottomBorder.isDone && <a href={programRows[3].link} className="flex-[1] font-glass">| ↗</a>}
+                        {bottomBorder.isDone && <a href={programRows[3].link} target="_blank" className="flex-[1] font-glass">| ↗</a>}
                     </div>
                     <div className="flex">
                         <div className="flex-[8]">
                             {fifthRow.displayedText}
                         </div>
-                        {bottomBorder.isDone && <a href={programRows[4].link} className="flex-[1] font-glass">| ↗</a>}
+                        {bottomBorder.isDone && <a href={programRows[4].link} target="_blank" className="flex-[1] font-glass">| ↗</a>}
                     </div>
                     <div className="flex">
                         <div className="flex-[8]">
                             {finalRow.displayedText} 
                         </div>
-                        {bottomBorder.isDone && <a href={programRows[5].link} className="flex-[1] font-glass">| ↗</a>}
+                        {bottomBorder.isDone && <a href={programRows[5].link} target="_blank" className="flex-[1] font-glass">| ↗</a>}
                     </div>
                     {bottomBorder.displayedText}
                 </div>
