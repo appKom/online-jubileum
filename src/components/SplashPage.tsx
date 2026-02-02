@@ -17,6 +17,7 @@ export default function SplashPage() {
     const [now, setNow] = useState(new Date());
     const targetDate = new Date(2026, 1, 16, 12);
 
+    // Used to make sure that the program for mobile and desktop are not written at the same time (this causes issues)
     const isMobile = useMediaQuery({ maxWidth: 1024 });
 
     // Update countdown
@@ -96,6 +97,7 @@ export default function SplashPage() {
 
     return (
         <div className="bg-black w-full h-full pt-6 pl-6 text-base lg:text-5xl font-glass text-white flex flex-col overflow-y-auto" ref={terminalRef}>
+            {/* Loading animation */}
             {!showProgram &&
             <>
                 <div className="flex animate-flicker">
@@ -125,6 +127,7 @@ export default function SplashPage() {
             }
             {showProgram &&
             <div className="h-screen pr-6 lg:pr-0 flex flex-col justify-around">
+                {/* Countdown and logo */}
                 <div className="flex flex-col lg:flex-row justify-evenly flex-[2]">
                     <div className="flex flex-col justify-center items-center text-3xl lg:text-6xl text-onlineblue animate-flicker">
                         <div>
@@ -139,6 +142,7 @@ export default function SplashPage() {
                     </div>
                     <pre className="font-glass text-xs mt-10 mb-10 lg:mb-0 lg:mt-0 text-onlineyellow animate-flicker flex justify-center items-center">{asciiTyped.displayedText}</pre>
                 </div>
+                {/* Program on desktop */}
                 <div className="w-full max-w-fit hidden lg:flex flex-col text-4xl text-start mx-auto animate-flicker">
                     {topBorderDesktop.displayedText}
                     <div className="flex">
@@ -179,6 +183,7 @@ export default function SplashPage() {
                     </div>
                     {bottomBorderDesktop.displayedText}
                 </div>
+                {/* Program on mobile */}
                 <div className="flex flex-col text-start mx-auto lg:hidden text-xl mb-12">
                     {topBorderMobile.displayedText}
                     <div className="flex justify-between">
