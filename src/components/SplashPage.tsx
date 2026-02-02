@@ -40,8 +40,6 @@ export default function SplashPage() {
  ${row.date} ${row.time}`;
     }
 
-    
-
     // Type each message
     const bootCommand = useTypewriter("  > SYSTEM BOOT", 30, true, true);
     const bootOK = useTypewriter("  OK", 30, bootCommand.isDone);
@@ -141,82 +139,88 @@ export default function SplashPage() {
                     </div>
                     <pre className="font-glass text-xs mt-10 mb-10 lg:mb-0 lg:mt-0 text-onlineyellow animate-flicker flex justify-center items-center">{asciiTyped.displayedText}</pre>
                 </div>
-                <div className="w-full max-w-fit hidden lg:flex flex-col text-4xl xl:text-5xl text-start mx-auto animate-flicker">
+                <div className="w-full max-w-fit hidden lg:flex flex-col text-4xl text-start mx-auto animate-flicker">
                     {topBorderDesktop.displayedText}
                     <div className="flex">
                         <div className="flex-[8]">
                             {firstRowDesktop.displayedText} 
                         </div>
-                        {bottomBorderDesktop.isDone && <a href={programRows[0].link} target="_blank" className="flex-[1] font-glass">| ↗</a>}
+                        {bottomBorderDesktop.isDone && <a href={programRows[0].link} target="_blank" className="flex-[1] font-glass text-onlineblue hover:underline">| -&gt;</a>}
                     </div>
                     <div className="flex">
                         <div className="flex-[8]">
                             {secondRowDesktop.displayedText} 
                         </div>
-                        {bottomBorderDesktop.isDone && <a href={programRows[1].link} target="_blank" className="flex-[1] font-glass">| ↗</a>}
+                        {bottomBorderDesktop.isDone && <a href={programRows[1].link} target="_blank" className="flex-[1] font-glass text-onlineblue hover:underline">| -&gt;</a>}
                     </div>
                     <div className="flex">
                         <div className="flex-[8]">
                             {thirdRowDesktop.displayedText} 
                         </div>
-                        {bottomBorderDesktop.isDone && <a href={programRows[2].link} target="_blank" className="flex-[1] font-glass">| ↗</a>}
+                        {bottomBorderDesktop.isDone && <a href={programRows[2].link} target="_blank" className="flex-[1] font-glass text-onlineblue hover:underline">| -&gt;</a>}
                         </div>
                     <div className="flex">
                         <div className="flex-[8]">
                             {fourthRowDesktop.displayedText}
                         </div>
-                        {bottomBorderDesktop.isDone && <a href={programRows[3].link} target="_blank" className="flex-[1] font-glass">| ↗</a>}
+                        {bottomBorderDesktop.isDone && <a href={programRows[3].link} target="_blank" className="flex-[1] font-glass text-onlineblue hover:underline">| -&gt;</a>}
                     </div>
                     <div className="flex">
                         <div className="flex-[8]">
                             {fifthRowDesktop.displayedText}
                         </div>
-                        {bottomBorderDesktop.isDone && <a href={programRows[4].link} target="_blank" className="flex-[1] font-glass">| ↗</a>}
+                        {bottomBorderDesktop.isDone && <a href={programRows[4].link} target="_blank" className="flex-[1] font-glass text-onlineblue hover:underline">| -&gt;</a>}
                     </div>
                     <div className="flex">
                         <div className="flex-[8]">
                             {finalRowDesktop.displayedText} 
                         </div>
-                        {bottomBorderDesktop.isDone && <a href={programRows[5].link} target="_blank" className="flex-[1] font-glass">| ↗</a>}
+                        {bottomBorderDesktop.isDone && <a href={programRows[5].link} target="_blank" className="flex-[1] font-glass text-onlineblue hover:underline">| -&gt;</a>}
                     </div>
                     {bottomBorderDesktop.displayedText}
                 </div>
                 <div className="flex flex-col text-start mx-auto lg:hidden text-xl mb-12">
                     {topBorderMobile.displayedText}
-                    <div>
+                    <div className="flex justify-between">
                         <pre className="font-glass">
                             {firstRowMobile.displayedText}
                         </pre>
+                        {finalRowMobile.isDone && <a href={programRows[5].link} target="_blank" className="font-glass text-2xl mt-2 text-onlineblue hover:underline">-&gt;</a>}
                     </div>
                     {topBorderMobile.displayedText}
-                    <div>
+                    <div className="flex justify-between">
                         <pre className="font-glass">
                             {secondRowMobile.displayedText}
                         </pre>
+                        {finalRowMobile.isDone && <a href={programRows[5].link} target="_blank" className="font-glass text-2xl mt-2 text-onlineblue hover:underline">-&gt;</a>}
                     </div>
                     {topBorderMobile.displayedText}
-                    <div>
+                    <div className="flex justify-between">
                         <pre className="font-glass">
                             {thirdRowMobile.displayedText}
                         </pre>
+                        {finalRowMobile.isDone && <a href={programRows[5].link} target="_blank" className="font-glass text-2xl mt-2 text-onlineblue hover:underline">-&gt;</a>}
                     </div>
                     {topBorderMobile.displayedText}
-                    <div>
+                    <div className="flex justify-between">
                         <pre className="font-glass">
                             {fourthRowMobile.displayedText}
                         </pre>
+                        {finalRowMobile.isDone && <a href={programRows[5].link} target="_blank" className="font-glass text-2xl mt-2 text-onlineblue hover:underline">-&gt;</a>}
                     </div>
                     {topBorderMobile.displayedText}
-                    <div>
+                    <div className="flex justify-between">
                         <pre className="font-glass">
                             {fifthRowMobile.displayedText}
                         </pre>
+                        {finalRowMobile.isDone && <a href={programRows[5].link} target="_blank" className="font-glass text-2xl mt-2 text-onlineblue hover:underline">-&gt;</a>}
                     </div>
                     {topBorderMobile.displayedText}
-                    <div>
+                    <div className="flex justify-between">
                         <pre className="font-glass">
                             {finalRowMobile.displayedText}
                         </pre>
+                        {finalRowMobile.isDone && <a href={programRows[5].link} target="_blank" className="font-glass text-2xl mt-2 text-onlineblue hover:underline">-&gt;</a>}
                     </div>
                     {topBorderMobile.displayedText}
                 </div>

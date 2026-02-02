@@ -82,7 +82,7 @@ ___________          wqqqqqwq          __________
 export const welcome = `  Online 40 års jubileum`;
 
 export const programBorderDesktop = `-------------------------------------------------------`;
-export const programBorderMobile = `--------------------------`;
+export const programBorderMobile = `-----------------------------`;
 
 export const programRows = [
   {
