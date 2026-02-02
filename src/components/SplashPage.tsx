@@ -3,6 +3,8 @@ import { systemSpam, loading, finalMessage, asciiArt, welcome, programBorderDesk
 import { useTypewriter } from "../utils/setTypeWriter";
 import { useState, useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
+import Cookies from "js-cookie";
+
 
 export interface ProgramRow {
     date: string,
@@ -42,13 +44,13 @@ export default function SplashPage() {
     }
 
     // Type each message
-    const bootCommand = useTypewriter("  > SYSTEM BOOT", 30, true, true);
+    const bootCommand = useTypewriter("  > SYSTEM BOOT", 30, !showProgram, true);
     const bootOK = useTypewriter("  OK", 30, bootCommand.isDone);
-    const programCommand = useTypewriter("  > STARTING PROGRAM ONLINE_JUBILEUM", 30, bootOK.isDone, true);
-    const programOK = useTypewriter("  OK", 30, programCommand.isDone);
-    const systemLog = useTypewriter(systemSpam, 1, programOK.isDone, false, 5);
-    const loadingTyped = useTypewriter(loading, 60, systemLog.isDone)
-    const finalMessageTyped = useTypewriter(finalMessage, 40, loadingTyped.isDone)
+    const programCommand = useTypewriter("  > STARTING PROGRAM ONLINE_JUBILEUM", 30, bootOK.isDone && !showProgram, true);
+    const programOK = useTypewriter("  OK", 30, programCommand.isDone && !showProgram);
+    const systemLog = useTypewriter(systemSpam, 1, programOK.isDone && !showProgram, false, 5);
+    const loadingTyped = useTypewriter(loading, 60, systemLog.isDone && !showProgram)
+    const finalMessageTyped = useTypewriter(finalMessage, 40, loadingTyped.isDone && !showProgram)
     const welcomeTyped = useTypewriter(welcome, 10, showProgram);
     const asciiTyped = useTypewriter(asciiArt, 10, welcomeTyped.isDone, false, 10);
     const topBorderDesktop = useTypewriter(programBorderDesktop, 10, asciiTyped.isDone)
@@ -70,10 +72,13 @@ export default function SplashPage() {
     // Short wait before showing program
     useEffect(() => {
         if (!finalMessageTyped.isDone) return;
-
+        
         const timeout = setTimeout(() => {
             setShowProgram(true);
         }, 1000);
+        
+        // Set skip animation cookie
+        Cookies.set('skipAnimation', "true", { expires: 7 });
 
         return () => clearTimeout(timeout);
     }, [finalMessageTyped.isDone]);
@@ -91,7 +96,20 @@ export default function SplashPage() {
         programCommand.displayedText,
         programOK.displayedText,
         systemLog.displayedText,
+        firstRowMobile.displayedText,
+        secondRowMobile.displayedText,
+        thirdRowMobile.displayedText,
+        fourthRowMobile.displayedText,
+        fifthRowMobile.displayedText,
+        finalRowMobile.displayedText
     ]);
+
+    // Get skip animation cookie on page load
+    useEffect(() => {
+        if (Cookies.get("skipAnimation") === "true") {
+            setShowProgram(true);
+        }
+    }, [])
 
 
 
