@@ -88,7 +88,7 @@ export const programRows = [
   {
     date: "16.FEB",
     time: "12:00-13:00",
-    title: "KICKOFF",
+    title: "JUBILEUMSUKE KICKOFF",
     link: "https://online.ntnu.no/arrangementer/Online-40-ar:-Jubileumsuke-Kickoff/7d1c466c-fec5-4e53-b58e-24d67a340d22"
   },
   {
@@ -102,6 +102,24 @@ export const programRows = [
     time: "17:00-23:59",
     title: "ØLYMPICS",
     link: "https://online.ntnu.no/arrangementer/Online-40-ar:-Olympics/14b35ea9-711b-4d2e-923b-902378d05d62"
+  },
+  {
+    date: "18.FEB",
+    time: "18:00-21:00",
+    title: "LAZERTAG OG PILS",
+    link: "https://online.ntnu.no/arrangementer/Online-40-ar:-Lazertag-og-Pils/f0ae9d08-3e3c-4f35-8da9-d7103d946d97"
+  },
+  {
+    date: "19.FEB",
+    time: "12:00-14:00",
+    title: "DALJEBELTEWORKSHOP",
+    link: "https://online.ntnu.no/arrangementer/Daljebelteworkshop/2e92b006-1c56-46d2-8320-912e655f82e1"
+  },
+  {
+    date: "19.FEB",
+    time: "17:00-22:00",
+    title: "KURS MED COMPUTAS",
+    link: "https://online.ntnu.no/arrangementer/Kurs-med-Computas!/099e3b1b-4e2e-464f-a158-4c90caab4875"
   },
   {
     date: "20.FEB",
