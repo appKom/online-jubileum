@@ -161,7 +161,7 @@ export default function SplashPage() {
                     <pre className="font-glass text-xs mt-10 mb-10 lg:mb-0 lg:mt-0 text-onlineyellow animate-flicker flex justify-center items-center">{asciiTyped.displayedText}</pre>
                 </div>
                 {/* Program on desktop */}
-                <div className="w-full max-w-fit hidden lg:flex flex-col text-4xl text-start mx-auto animate-flicker">
+                <div className="w-full max-w-fit hidden lg:flex flex-col text-4xl xl:text-5xl text-start mx-auto animate-flicker">
                     {topBorderDesktop.displayedText}
                     <div className="flex">
                         <div className="flex-[8]">
