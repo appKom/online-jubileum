@@ -10,6 +10,8 @@
   --animate-flicker: flicker 0.15s infinite;
   --animate-scan: scan 0.2s linear infinite;
   --animate-scroll-indicator: scrollIndicator 1s steps(2) infinite;
+  --color-onlineblue: #0B5374;
+  --color-onlineyellow: #FAB759;
 
   @keyframes scan {
     0% {
