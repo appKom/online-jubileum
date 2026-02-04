@@ -54,7 +54,7 @@ export const systemSpam = `
 
 export const loading = `  |=================================|`
 
-export const finalMessage = `  ONLINE_JUBILUEM READY TO LAUNCH!`
+export const finalMessage = `  ONLINE_JUBILEUM READY TO LAUNCH!`
 
 export const asciiArt = `                          _________ pwqqwwwwwwqq              
           ___________  qwqqqqqqqqqqqqq            
