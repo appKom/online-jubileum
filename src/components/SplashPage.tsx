@@ -18,7 +18,7 @@ export default function SplashPage() {
     const [showProgram, setShowProgram] = useState(false);
     const [now, setNow] = useState(new Date());
     const targetDate = new Date(2026, 1, 16, 12);
-
+    
     // Used to make sure that the program for mobile and desktop are not written at the same time (this causes issues)
     const isMobile = useMediaQuery({ maxWidth: 1024 });
 
@@ -155,11 +155,11 @@ export default function SplashPage() {
             <div className="h-screen pr-6 lg:pr-0 flex flex-col justify-around">
                 {/* Countdown and logo */}
                 <div className="flex flex-col lg:flex-row justify-evenly flex-[2]">
-                    <div className="flex flex-col justify-center items-center text-3xl lg:text-6xl text-onlineblue animate-flicker">
+                        <div className="flex flex-col justify-center items-center text-3xl lg:text-6xl text-onlineblue animate-flicker">
                         <div>
                             {welcomeTyped.displayedText}
                         </div>
-                        {welcomeTyped.isDone && (
+                        {(welcomeTyped.isDone && now.getTime() < targetDate.getTime()) && (
                             <div>
                                 {timeLeft.days}d {timeLeft.hours}t {timeLeft.minutes}m {timeLeft.seconds}s
                             </div>
